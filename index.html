@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="https://kit.fontawesome.com/0242f31d13.js" crossorigin="anonymous"></script>
+    <title>Covid-19 Tracker</title>
+  </head>
+  <body>
+    <section id="home">
+      <div class="container">
+        <div class="navbar">
+          <div class="menu">
+            <h3 class="logo">Hack<span>Covid</span></h3>
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-container">
+          <div class="main">
+            <header>
+              <div class="overlay">
+                <div class="inner">
+                  <h1 class="title">
+                    <p>Let us hack <span id="covid">Covid-19</span></p>
+                  </h1>
+                  <p>All you need to know about the Corona Virus</p>
+                  <a href="#about"><button class="btn">Read More</button></a>
+                  <a href="#tracker"><button class="btn">Tracker</button></a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+          <div class="shadow one"></div>
+          <div class="shadow two"></div>
+        </div>
+
+        <div class="links">
+          <ul class="flex-row">
+            <li>
+              <a href="#home" style="--i: 0.05s">Home</a>
+            </li>
+            <li>
+              <a href="#about" style="--i: 0.2s">About</a>
+            </li>
+            <li>
+              <a href="#tracker" style="--i: 0.25s">Tracker</a>
+            </li>
+            <li>
+              <a href="#contact" style="--i: 0.3s">Contact</a>
+            </li>
+            <li>
+              <a href="#footer" style="--i: 0.3s">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="title-text">
+        <p>KNOW MORE</p>
+        <h1>The 2 major components</h1>
+      </div>
+      <div class="about-box">
+          <div class="single-about">
+            <img src="img/vaccination.jpg" alt="Vaccination" />
+            <div class="overlay-about"></div>
+            <div class="about-desc">
+              <h3>Vaccination</h3>
+              <p>
+                A COVID-19 vaccine is a vaccine intended to provide acquired immunity against severe acute respiratory syndrome coronavirus 2, the virus that causes coronavirus disease 2019
+              </p>
+            </div>
+        </div>
+          <div class="single-about">
+            <img src="img/heroes.jpg" alt="Doctors" />
+            <div class="overlay-about"></div>
+            <div class="about-desc">
+              <h3>Our Heroes</h3>
+              <p>
+                Doctors form an essential part of an effective response to the COVID-19 pandemic. We argue they have a duty to participate in pandemic response due to their special skills, but these skills vary between different doctors, and their duties are constrained by other competing rights.
+              </p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="tracker">
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="search"
+                  id="search-input"
+                  placeholder="Select Country..."
+                />
+                <img class="close" src="img/close.svg" alt="" onclick="closeDialogue" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="recovered">
+            <div class="title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+          <div class="deaths">
+            <div class="title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-title-text">
+        <p>Contact Us</p>
+      </div>
+      <form onsubmit="sendEmail(); reset(); return false;">
+          <h3>Covid Queries?</h3>
+          <p>Post Here!</p>
+          <input type="text" id="name" name="name" title="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" title="email" placeholder="Email Id" required>
+          <input type="text" id="phone" name="phone" title="phone" placeholder="Phone Number" required>
+          <textarea name="message" id="message" rows="4" placeholder="How can we help you?"></textarea>
+          <button type="submit" class="btn" onsubmit="sendEmail()">Send</button>
+        </form>
+    </section>
+
+      <footer id="footer">
+        <div class="social-links">
+          <a title="Instagram" target="_main" href="https://instagram.com/atharv_av_?igshid=ZmZhODViOGI="><i class="fa-brands fa-instagram"></i></a>
+          <a title="LinkedIn" target="_main" href="https://www.linkedin.com/in/atharv-vibhute-189320227"><i class="fa-brands fa-linkedin"></i></a>
+          <a title="Twitter" target="_main" href="https://twitter.com/atharv_av?t=OyqgnWYaZdBlPYhwFhXS0g&s=09"><i class="fa-brands fa-twitter"></i></a>
+          <a title="Facebook" target="_main" href="https://www.facebook.com/atharv.vibhute.33?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+          <a title="Whatsapp" target="_main" href="https://wa.me/+917049394520"><i class="fa-brands fa-whatsapp"></i></a>
+          <p>Copyright © Atharv Vibhute</p>
+      </div>
+      <div class="resources">
+        <ul>
+          <li><a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/COVID-19_vaccine">Vaccination</a></li>
+          <li><a rel="noopener" target="_blank" href="https://ourworldindata.org/covid-hospitalizations">Hospitals</a></li>
+          <li><a rel="noopener" target="_blank" href="https://www.webmd.com/covid/covid-recovery-overview">Recovery</a></li>
+          <li><a rel="noopener" target="_blank" href="https://www.techuk.org/resource/the-importance-of-technology-in-the-era-of-covid-19.html">Rise of Technology</a></li>
+        </ul>
+      </div>
+      </footer>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="countries.js"></script>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@media only screen and (max-width: 720px) {
+    header{
+        background: url("img/mobileBg.jpg") no-repeat top center / cover;
+    }
+
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        transform: translate(-240px, -300px);
+    }
+
+    li{
+        margin: 17px;
+    }
+
+    .single-about{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .about-desc h3{
+        font-size: 15px;
+    }
+
+    .about-desc p{
+        font-size: 12px;
+    }
+
+    .about-desc hr{
+        margin: 5px auto;
+    }
+
+    .single-about:hover .about-desc{
+        bottom: 25% !important;
+    }
+  }
